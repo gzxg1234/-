@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/top_height" 
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:clipToPadding="false">
+            <RelativeLayout 
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:text="2015年10月19日" />
+                <TextView 
+                    android:id="@+id/tv_weekday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="20dp"
+                    android:text="星期三" />
+                
+                <View 
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                   	android:layout_below="@+id/tv_date"
+                    android:background="@color/text_green_color"/>
+                
+                <TextView 
+                    android:id="@+id/tv_lunar_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                   	android:layout_below="@+id/divider"
+                    android:text="已莫羊年 十月十一" />
+                
+                <TextView 
+                    android:id="@+id/tv_noaqi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:text="此地区暂无空气质量数据"
+                    android:gravity="center"
+                    android:background="#7298A0"
+                   	android:layout_below="@+id/tv_lunar_date"
+                   	android:layout_marginTop="10dp"
+                    />
+                <RelativeLayout 
+                    android:id="@+id/rl_aqi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                   	android:layout_below="@+id/tv_lunar_date"
+                   	android:layout_marginTop="10dp"
+                   	android:visibility="gone"
+                    >
+                     <TextView 
+	                    android:id="@+id/tv_aqi_text"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_alignParentLeft="true"
+	                    android:layout_alignParentTop="true"
+	                    android:text="赣州  空气质量:良(78)" />
+
+                     <SeekBar
+                         android:id="@+id/seek_aqi"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/tv_aqi_text"
+                         android:padding="0dp"
+                         android:thumb="@drawable/seek_aqi_thumb"
+                         android:progressDrawable="@drawable/seek_aqi_bg"
+                         android:max="500"
+                         android:maxHeight="5dp"
+						 android:minHeight="5dp"
+                         android:progress="70" />
+                     <LinearLayout 
+                         android:layout_width="match_parent"
+                         android:layout_height="50dp"
+                         android:layout_below="@+id/seek_aqi"
+                         android:layout_marginTop="10dp"
+                         >
+                         <RelativeLayout
+                             android:layout_weight="1"
+                             android:layout_width="0dp"
+                             android:layout_height="match_parent"
+                             android:gravity="center_vertical"
+                             android:background="#7298A0">
+                             <TextView 
+                                 android:id="@+id/lable_pm25"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:gravity="center"
+                                 android:textColor="#FFFFFF"
+                                 android:text="PM2.5"/>
+                             <TextView 
+                                 android:id="@+id/tv_pm25"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:layout_below="@+id/lable_pm25"
+                                 android:gravity="center"
+                                 android:textColor="#FFFFFF"
+                                 android:text="22"/>
+                         </RelativeLayout>
+                         
+                         <RelativeLayout 
+                             android:layout_weight="1"
+                             android:layout_width="0dp"
+                             android:layout_height="match_parent"
+                             android:layout_marginLeft="10dp"
+                             android:gravity="center_vertical"
+                             android:background="#7298A0">
+                             
+                             <TextView 
+                                 android:id="@+id/lable_pm10"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:gravity="center"
+                                 android:textColor="#FFFFFF"
+                                 android:text="PM10"/>
+                             <TextView 
+                                 android:id="@+id/tv_pm10"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:layout_below="@+id/lable_pm10"
+                                 android:gravity="center"
+                                 android:textColor="#FFFFFF"
+                                 android:text="87"/>
+                         </RelativeLayout>
+                         
+                         <RelativeLayout 
+                             android:layout_weight="1"
+                             android:layout_width="0dp"
+                             android:layout_height="match_parent"
+                             android:layout_marginLeft="10dp"
+                             android:gravity="center_vertical"
+                             android:background="#7298A0">
+                             
+                             <TextView 
+                                 android:id="@+id/lable_so2"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:gravity="center"
+                                 android:textColor="#FFFFFF"
+                                 android:text="SO2"/>
+                             <TextView 
+                                 android:id="@+id/tv_so2"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:layout_below="@+id/lable_so2"
+                                 android:gravity="center"
+                                 android:textColor="#FFFFFF"
+                                 android:text="13"/>
+                         </RelativeLayout>
+                         
+                         <RelativeLayout 
+                             android:layout_weight="1"
+                             android:layout_width="0dp"
+                             android:layout_height="match_parent"
+                             android:layout_marginLeft="10dp"
+                             android:gravity="center_vertical"
+                             android:background="#7298A0">
+                             
+                             <TextView 
+                                 android:id="@+id/lable_no2"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:gravity="center"
+                                 android:textColor="#FFFFFF"
+                                 android:text="NO2"/>
+                             <TextView 
+                                 android:id="@+id/tv_no2"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:layout_below="@+id/lable_no2"
+                                 android:gravity="center"
+                                 android:textColor="#FFFFFF"
+                                 android:text="50"/>
+                         </RelativeLayout>
+                     </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+    
+    <ImageView
+        android:id="@+id/iv_bottom_city"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_city_height"
+        android:layout_alignParentBottom="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/city" />
+
+
+</RelativeLayout>

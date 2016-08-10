@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    
+    <attr name="textSize" format="dimension"></attr>
+    <attr name="textColor" format="color"></attr>
+     
+    <!-- 滚动的text -->
+    <declare-styleable name="ScrollText">
+	    <attr name="textSize"></attr>
+	    <attr name="textColor"></attr>
+        <attr name="text" format="string"/>
+    </declare-styleable>
+    
+    <!-- 下拉列表 -->
+    <declare-styleable name="MySpinner">
+	    <attr name="textSize"></attr>
+	    <attr name="textColor"></attr>
+        <attr name="textSelectedColor" format="color"></attr>
+        <attr name="paddingLeft" format="dimension"/>
+        <attr name="entries" format="reference"></attr>
+    </declare-styleable>
+    
+    
+    
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="border_overlay" format="boolean" />
+    </declare-styleable>
+    
+</resources>

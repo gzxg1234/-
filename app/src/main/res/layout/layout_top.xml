@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@drawable/top_cloud" >
+	<ImageView
+	    android:id="@+id/iv_menu"
+	    android:layout_width="@dimen/top_img_size"
+	    android:layout_height="@dimen/top_img_size"
+	    android:layout_alignParentRight="true"
+	    android:layout_alignParentTop="true"
+	    android:layout_marginRight="10dp"
+	    android:src="@drawable/menu" />
+	
+	<ImageView
+	    android:id="@+id/iv_share"
+	    android:layout_width="@dimen/top_img_size"
+	    android:layout_height="@dimen/top_img_size"
+	    android:layout_toLeftOf="@+id/iv_menu"
+	    android:layout_marginRight="20dp"
+	    android:src="@drawable/share" />
+	
+	<TextView
+	    android:id="@+id/tv_city"
+	    android:layout_width="wrap_content"
+	    android:layout_height="40dp"
+	    android:layout_marginLeft="20dp"
+	    android:layout_alignParentLeft="true"
+	    android:gravity="center"
+	    android:textSize="@dimen/text_size_city"
+	    android:textStyle="bold"
+	    android:textColor="@color/text_green_color" />
+	
+	<TextView
+	    android:id="@+id/tv_update_time"
+	    android:layout_width="wrap_content"
+	    android:layout_height="40dp"
+	    android:layout_alignBottom="@+id/tv_city"
+	    android:layout_marginLeft="5dp"
+	    android:layout_toRightOf="@+id/tv_city"
+	    android:gravity="center"/>
+
+
+</RelativeLayout>

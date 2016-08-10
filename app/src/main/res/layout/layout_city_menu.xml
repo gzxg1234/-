@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+	
+    
+	<ImageButton
+	    android:id="@+id/btn_del_city"
+	    android:layout_width="@dimen/menu_button_size"
+	    android:layout_height="@dimen/menu_button_size"
+	    android:background="@drawable/menu_btn_selector"
+	    android:src="@drawable/btn_delete_city" />
+	
+	<ImageButton
+	    android:id="@+id/btn_set_primary"
+	    android:layout_width="@dimen/menu_button_size"
+	    android:layout_height="@dimen/menu_button_size"
+	    android:layout_marginLeft="10dp"
+	    android:background="@drawable/menu_btn_selector"
+	    android:src="@drawable/btn_set_primary" />
+	
+	<ImageButton
+	    android:id="@+id/btn_refresh_data"
+	    android:layout_width="@dimen/menu_button_size"
+	    android:layout_height="@dimen/menu_button_size"
+	    android:layout_marginLeft="10dp"
+	    android:background="@drawable/menu_btn_selector"
+	    android:src="@drawable/btn_refresh_data" />
+	
+</LinearLayout>

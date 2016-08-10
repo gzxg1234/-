@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_sky"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+    
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager_setting"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/cloud_height"
+        android:clipToPadding="false"/>
+    
+    <com.viewpagerindicator.TitlePageIndicator
+	    android:id="@+id/pager_indicator"
+	    android:layout_height="@dimen/cloud_height"
+	    android:layout_width="match_parent"
+	    android:background="@drawable/cloud_2"
+	    android:textColor="#c0ded1"
+	    android:textSize="30sp"
+	    app:footerIndicatorStyle="none"
+	    app:footerLineHeight="0dp"
+	    app:titlePadding="10dp"
+	    app:clipPadding="10dp"
+	    app:topPadding="20dp"
+	    app:selectedBold="false"
+	    app:selectedColor="@color/text_green_color"/>
+    
+	 <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/text_green_color"
+        android:text="设置"/>
+</FrameLayout>

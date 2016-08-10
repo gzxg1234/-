@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="请输入地名查询" />
+
+    <EditText
+        android:id="@+id/et_word"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_tip"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_tip"
+        android:singleLine="true"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/tv_tip2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/et_word"
+        android:layout_below="@+id/et_word"
+        android:text="选择您想要获取天气的地区，应用将为您添加此地区"
+        android:textColor="@android:color/tertiary_text_light" />
+
+    <ListView
+        android:id="@+id/lv_match_city"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@+id/tv_tip2"
+        android:layout_below="@+id/tv_tip2"
+        android:divider="#00000000"
+        android:dividerHeight="0dp">
+    </ListView>
+
+</RelativeLayout>

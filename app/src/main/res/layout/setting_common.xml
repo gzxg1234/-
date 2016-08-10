@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/tv_lab1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="自动定位城市"/>
+
+    <Switch
+        android:id="@+id/swtich_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_lab1"
+        android:layout_marginTop="5dp"
+        android:textOff=""
+        android:textOn=""
+        android:switchMinWidth="70dp"
+        android:checked="true"
+        android:thumb="@drawable/switch_thumb"
+        android:track="@drawable/switch_track" />
+
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/swtich_location"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        android:text="开启自动定位后，应用将使用系统位置服务确定您所处的城市，并将您的位置设置为主城市。如果您希望固定显示某个城市的数据，请关闭此项" />
+
+    <Button
+        android:id="@+id/btn_clear_cache"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/tv_tip"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/setting_btn_bg"
+        android:text="清理缓存"
+        android:textColor="@drawable/setting_btn_text_color" />
+    
+</RelativeLayout>

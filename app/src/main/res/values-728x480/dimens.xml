@@ -1,0 +1,50 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+	<dimen name="slide_menu_width">80dp</dimen>
+    <dimen name="menu_button_size">60dp</dimen>
+	<dimen name="negative_slide_menu_width">-80dp</dimen>
+    
+    <!-- 界面顶部栏 -->
+    <dimen name="text_size_city">18sp</dimen>
+    <dimen name="top_img_size">35dp</dimen>
+    
+    <!-- 顶层的旋转地球 -->
+    <dimen name="petals_height">170dp</dimen>
+    
+    <!-- 即使天气-->
+    <!-- 白天夜间天气类型文字大小-->
+    <dimen name="weather_type_text_size">15sp</dimen>
+    <!-- 夜间天气类型-->
+    <dimen name="weather_night_type_text_size">12sp</dimen>
+    <!-- 即时温度文字大小 -->
+    <dimen name="temperature_text_size">40sp</dimen>
+    <!-- 湿度，温度区间，风向 文字大小 -->
+    <dimen name="warning_icon_size">30dp</dimen>
+    <!-- 湿度，温度区间，风向 文字大小 -->
+    <dimen name="right_bottom_text_size">12sp</dimen>
+    <!-- 间距 -->
+    <dimen name="weather_type_night_margin_bottom">5dp</dimen>
+    <!-- 日期 -->
+    <dimen name="date_text_size">12sp</dimen>
+    <dimen name="lunar_date_text_size">11sp</dimen>
+     
+    <!-- 生活指数Fragment -->
+    <dimen name="cloud_height">110dp</dimen>
+    <dimen name="index_icon_width">50dp</dimen>
+    
+    <!-- 额外信息 Fragment-->
+    <dimen name="bottom_city_height">80dp</dimen>
+    
+    <dimen name="menu_type_icon_size">20dp</dimen>
+    <dimen name="menu_city_type_text_size">12sp</dimen>
+    <dimen name="menu_temp_text_size">12sp</dimen>
+    
+    <dimen name="forecast_type_size">60dp</dimen>
+    
+    <dimen name="pager_width">230dp</dimen>
+    <dimen name="pager_height">330dp</dimen>
+    
+    <dimen name="window_forecast_text_size1">15sp</dimen>
+    <dimen name="window_forecast_text_size2">12sp</dimen>
+</resources>

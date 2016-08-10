@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/tv_lab1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="应用启动时数据刷新策略" />
+
+
+    <com.sanron.sunweather.view.MySpinner
+        android:id="@+id/spinner_update_policy"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/tv_lab1"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/spinner_bg"
+        app:textSize="18sp"
+        app:textSelectedColor="#6988A0" />
+
+    <TextView
+        android:id="@+id/tv_lab2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner_update_policy"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp" />
+    
+</RelativeLayout>

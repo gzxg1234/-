@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/slide_menu_width"
+    android:layout_height="match_parent"
+    android:clickable="true">
+
+    <ImageView
+        android:id="@+id/iv_line"
+        android:layout_width="10dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/line" />
+    
+	<LinearLayout 
+	    android:id="@+id/ll_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:orientation="vertical"
+	    android:gravity="center_horizontal"
+	    >
+
+		<Button
+		    android:id="@+id/btn_add_city"
+		    android:layout_width="@dimen/menu_button_size"
+		    android:layout_height="@dimen/menu_button_size"
+		    android:background="@drawable/menu_btn_selector"
+		    android:text="+"
+		    android:textColor="@android:color/white"
+		    android:textSize="30sp" />
+	    <View 
+	        android:background="@color/menu_button_divider_color"
+	        android:layout_width="@dimen/menu_button_size"
+	        android:layout_height="1dp"
+	        android:layout_marginTop="10dp"
+	        android:layout_marginBottom="10dp"/>
+	    
+	    <ListView 
+	        android:id="@+id/lv_city"
+	        android:layout_width="@dimen/menu_button_size"
+	        android:layout_height="0dp"
+	        android:layout_weight="1"
+	        android:dividerHeight="10dp"
+	        android:divider="#00000000">
+	    </ListView>
+
+	    
+	    <View 
+	        android:background="@color/menu_button_divider_color"
+	        android:layout_width="@dimen/menu_button_size"
+	        android:layout_height="1dp"
+	        android:layout_marginTop="10dp"
+	        android:layout_marginBottom="10dp"/>
+	    
+	    <Button
+		    android:id="@+id/btn_recommand"
+		    android:paddingTop="10dp"
+		    android:layout_width="@dimen/menu_button_size"
+		    android:layout_height="@dimen/menu_button_size"
+		    android:gravity="center"
+		    android:background="@drawable/menu_btn_selector"
+		    android:drawableTop="@drawable/ic_recommand"
+		    android:text="推荐"
+		    android:textColor="@android:color/white"
+		    android:textSize="8sp" />
+	    
+	    <View 
+	        android:background="@color/menu_button_divider_color"
+	        android:layout_width="@dimen/menu_button_size"
+	        android:layout_height="1dp"
+	        android:layout_marginTop="10dp"
+	        android:layout_marginBottom="10dp"/>
+	    
+	    <Button
+		    android:id="@+id/btn_setting"
+		    android:paddingTop="10dp"
+		    android:layout_width="@dimen/menu_button_size"
+		    android:layout_height="@dimen/menu_button_size"
+		    android:gravity="center"
+		    android:background="@drawable/menu_btn_selector"
+		    android:drawableTop="@drawable/ic_setting"
+		    android:text="设置"
+		    android:textColor="@android:color/white"
+		    android:textSize="8sp" />
+	</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/menu_button_size"
+    android:layout_height="@dimen/menu_button_size"
+    android:background="@drawable/menu_btn_selector"
+    android:padding="2dp">
+
+    <TextView
+        android:id="@+id/tv_weather_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="阴" 
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/menu_city_type_text_size"/>
+
+    <TextView
+        android:id="@+id/tv_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_weather_icon"
+        android:text="15°~16°"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/menu_temp_text_size" />
+
+    <TextView
+        android:id="@+id/tv_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:text="南昌"
+        android:textSize="@dimen/menu_city_type_text_size" />
+
+    <ImageView
+        android:id="@+id/iv_weather_icon"
+        android:layout_width="@dimen/menu_type_icon_size"
+        android:layout_height="@dimen/menu_type_icon_size"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/tv_weather_type"
+        android:scaleType="fitXY"/>
+    
+</RelativeLayout>

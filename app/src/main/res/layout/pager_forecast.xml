@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+    
+    <RelativeLayout
+        android:layout_width="@dimen/pager_width"
+        android:layout_height="@dimen/pager_height"
+   		android:background="@drawable/bg_paper" >
+
+        <Space 
+            android:id="@+id/horizotal_line"
+	        android:layout_width="1dp"
+	        android:layout_height="match_parent"
+	        android:layout_centerHorizontal="true"/>
+        
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:textSize="@dimen/window_forecast_text_size1"
+            android:text="2015年11月17日 星期四" />
+
+        <TextView
+            android:id="@+id/tv_lunar_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_date"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:textSize="@dimen/window_forecast_text_size1"
+            android:text="农历 十月初八" />
+
+        <ImageView
+            android:id="@+id/iv_day_type"
+            android:layout_width="@dimen/forecast_type_size"
+            android:layout_height="@dimen/forecast_type_size"
+            android:layout_toLeftOf="@+id/horizotal_line"
+            android:layout_below="@+id/tv_lunar_date"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/w_qin_day" />
+        
+        <ImageView
+            android:id="@+id/iv_night_type"
+            android:layout_width="@dimen/forecast_type_size"
+            android:layout_height="@dimen/forecast_type_size"
+            android:layout_toRightOf="@+id/horizotal_line"
+            android:layout_below="@+id/tv_lunar_date"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/w_qin_night" />
+
+        
+        <TextView
+            android:id="@+id/tv_day_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/iv_day_type"
+            android:layout_alignRight="@+id/iv_day_type"
+            android:layout_below="@+id/iv_day_type"
+            android:gravity="center"
+            android:textSize="@dimen/window_forecast_text_size2"
+            android:text="小雨" />
+        
+        <TextView
+            android:id="@+id/tv_night_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/iv_night_type"
+            android:layout_alignRight="@+id/iv_night_type"
+            android:layout_below="@+id/iv_night_type"
+            android:gravity="center"
+            android:textSize="@dimen/window_forecast_text_size2"
+            android:text="大雨" />
+        
+        <TextView
+            android:id="@+id/tv_high_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_day_type"
+            android:layout_below="@+id/tv_day_type"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:textSize="@dimen/window_forecast_text_size2"
+            android:text="白天最高19°" />
+
+        <TextView
+            android:id="@+id/tv_low_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/tv_night_type"
+            android:layout_below="@+id/tv_night_type"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:textSize="@dimen/window_forecast_text_size2"
+            android:text="夜里最低12°"/>
+        
+		 <TextView
+            android:id="@+id/tv_sunrise_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_low_temp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:textSize="@dimen/window_forecast_text_size2"
+            android:text="日出 06:22"/>
+		  
+		 <TextView
+            android:id="@+id/tv_sunset_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_sunrise_time"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textSize="@dimen/window_forecast_text_size2"
+            android:text="日落 17:50"/>
+	</RelativeLayout>
+</RelativeLayout>

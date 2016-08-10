@@ -1,0 +1,54 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:paddingRight="@dimen/slide_menu_width"
+	android:clipToPadding="false"
+    android:clipChildren="false"
+    android:orientation="vertical" 
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <include 
+        android:id="@+id/top"
+        layout="@layout/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_height"/> 
+	
+	<include 
+        android:id="@+id/center"
+        layout="@layout/layout_instant"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"/>
+	
+	<RelativeLayout
+	    android:id="@+id/bottom"
+	    android:layout_width="match_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="5">
+
+		<com.sanron.sunweather.view.RotateView 
+	        android:id="@+id/rotate_view"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+        	android:layout_marginRight="@dimen/negative_slide_menu_width"
+        	android:layout_marginLeft="@dimen/negative_slide_menu_width"
+	        android:layout_alignParentBottom="true">
+		</com.sanron.sunweather.view.RotateView>
+ 
+		<com.sanron.sunweather.view.PetalContanier
+		    android:id="@+id/petals"
+		    android:layout_width="match_parent"
+		    android:layout_height="180dp"
+		    android:layout_alignParentBottom="true">
+		</com.sanron.sunweather.view.PetalContanier>
+		
+		<com.sanron.sunweather.view.ScrollText 
+		    android:id="@+id/tv_state_tip"
+		    android:layout_width="match_parent"
+		    android:layout_height="50dp"
+		    android:layout_above="@+id/petals"
+		    app:textSize="12sp"
+		    />
+    </RelativeLayout>
+</LinearLayout>
