@@ -18,9 +18,9 @@ import com.sanron.sunweather.activities.fragment.BaseFragment;
 import com.sanron.sunweather.activities.fragment.ExtrasFrag;
 import com.sanron.sunweather.activities.fragment.LifeIndexFrag;
 import com.sanron.sunweather.activities.fragment.MenuFrag;
+import com.sanron.sunweather.common.CityProvider;
 import com.sanron.sunweather.engine.AppConfig;
 import com.sanron.sunweather.engine.CacheManager;
-import com.sanron.sunweather.common.CityProvider;
 import com.sanron.sunweather.engine.LocationProvider;
 import com.sanron.sunweather.engine.LocationProvider.OnLocationListener;
 import com.sanron.sunweather.engine.WeatherProvider;
@@ -37,6 +37,8 @@ import com.sanron.sunweather.view.v4.DrawerLayout;
 import com.sanron.sunweather.view.v4.DrawerLayout.DrawerListener;
 import com.umeng.update.UmengUpdateAgent;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -122,7 +124,13 @@ public class MainActivity extends FragmentActivity {
 
         fm = getSupportFragmentManager();
 
-        aboveFrag = new AboveFrag();
+        aboveFrag = (AboveFrag) fm.findFragmentByTag(TAG_ABOVE);
+        if(aboveFrag==null) {
+            aboveFrag = new AboveFrag();
+            fm.beginTransaction().
+                    add(R.id.fragment_container_above, aboveFrag, TAG_ABOVE)
+                    .commit();
+        }
         menuFrag = new MenuFrag();
         menuFrag.setWeatherDatas(weatherDatas);
         menuFrag.setCities(config.getCities());
@@ -130,10 +138,6 @@ public class MainActivity extends FragmentActivity {
             WeatherData curWeatherData = weatherDatas.get(config.getCity(currentCityPosition));
             aboveFrag.setWeatherData(curWeatherData);
         }
-
-        fm.beginTransaction().
-                add(R.id.fragment_container_above, aboveFrag, TAG_ABOVE)
-                .commit();
 
         fm.addOnBackStackChangedListener(new OnBackStackChangedListener() {
             @Override
@@ -195,13 +199,6 @@ public class MainActivity extends FragmentActivity {
         }
     }
 
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        //super.onSaveInstanceState(outState);
-        //当保存fragment状态时，activity被系统销毁后重启时fragment会被系统恢复，
-        //而前面代码又add了一遍，造成fragment重叠
-        //不保存fragment状态,懒得处理
-    }
 
     //定位
     private void locationWeather() {
@@ -367,6 +364,12 @@ public class MainActivity extends FragmentActivity {
         public void onSuccess(WeatherData weatherData) {
             //缓存数据
 
+            Collections.sort(weatherData.getWeathers(), new Comparator<Weather>() {
+                @Override
+                public int compare(Weather lhs, Weather rhs) {
+                    return lhs.getDate().compareTo(rhs.getDate());
+                }
+            });
             WeatherData data = weatherDatas.get(weatherData.getCity());
             if (data != null) {
                 //把前一天的天气数据保存起来

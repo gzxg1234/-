@@ -21,22 +21,13 @@ import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.NodeList;
-
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 
 /**
  * 天气服务
@@ -177,7 +168,7 @@ public class WeatherProvider {
                 weatherData.setAirEnvironment(airEnvironment);
                 weatherData.setInstantWeather(instantWeather);
             } else if (key.matches("^f\\d+$")) {
-                if (weatherData.getWeathers().size() == 5) {
+                if (weatherData.getWeathers().size() == 7) {
                     continue;
                 }
                 JsonObject element = (JsonObject) entry.getValue();

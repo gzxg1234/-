@@ -1,9 +1,5 @@
 package com.sanron.sunweather.activities.fragment;
 
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
-
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -28,14 +24,16 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.sanron.sunweather.R;
-import com.sanron.sunweather.activities.AddCityActivity;
 import com.sanron.sunweather.activities.SettingActivity;
 import com.sanron.sunweather.common.IconProvider;
 import com.sanron.sunweather.entity.Weather;
 import com.sanron.sunweather.entity.WeatherData;
 import com.sanron.sunweather.event.CityEvent;
-import com.sanron.sunweather.utils.DateUtils;
 import com.sanron.sunweather.utils.DimenUtils;
+
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
 public class MenuFrag extends BaseFragment implements OnClickListener, OnItemClickListener,
         OnItemLongClickListener {
